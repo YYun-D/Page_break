@@ -1,11 +1,9 @@
 var HammerElement = document.createElement('img');
 
 HammerElement.src = 'https://drive.google.com/uc?id=1vopgYHCDe2kUcxoZMvDas_SQN_sotKxa';
-HammerElement.style.width = '100px';
-HammerElement.style.height = '100px';
+HammerElement.style.width = '125px';
+HammerElement.style.height = '125px';
 HammerElement.style.position = 'fixed';
-HammerElement.style.top = '50px';  // 상단으로 조정
-HammerElement.style.right = '50px';  // 오른쪽으로 조정
 HammerElement.style.zIndex = '10001';
 HammerElement.style.borderRadius = '10px';
 HammerElement.style.userSelect = 'none'; // 드래그 막기
@@ -26,10 +24,10 @@ HammerElement.addEventListener('click', (event) => {
     CrackImage.src = 'https://drive.google.com/uc?id=13TWTLr5W_ePXiKXsCat6NKswRX0On_OY';
     CrackImage.style.position = 'fixed';
     CrackImage.style.zIndex = '10000';
-    CrackImage.style.width = '100px';
-    CrackImage.style.height = '100px';
-    var newLeft = event.clientX - 130;
-    var newTop = event.clientY - 100;
+    CrackImage.style.width = '120px';
+    CrackImage.style.height = '120px';
+    var newLeft = event.clientX - 150;
+    var newTop = event.clientY - 70;
     CrackImage.style.left = `${newLeft}px`;
     CrackImage.style.top = `${newTop}px`;
     document.body.appendChild(CrackImage);
@@ -41,17 +39,7 @@ HammerElement.addEventListener('click', (event) => {
   isCrashing = true;
 });
 
-HammerElement.addEventListener('mousedown', function(event) {
-  isDragging = true;
-  offsetX = event.clientX - HammerElement.offsetLeft;
-  offsetY = event.clientY - HammerElement.offsetTop;
-});
-
 document.addEventListener('mousemove', function(event) {
-  if (isDragging) {
-    var newLeft = event.clientX - offsetX;
-    var newTop = event.clientY - offsetY;
-    HammerElement.style.left = newLeft + 'px';
-    HammerElement.style.top = newTop + 'px';
-  }
+    HammerElement.style.left = event.clientX - 90 + 'px';
+    HammerElement.style.top = event.clientY - 90 + 'px';
 });

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "화면 부수기",
-    "version": "0.1",
+    "version": "0.1.1",
     "description": "현재 페이지 부수기 게임",
     "action": {
       "default_popup": "popup.html",
