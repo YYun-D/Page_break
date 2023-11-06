@@ -2,7 +2,7 @@
 
 현재 사이트에서 무기를 사용하여 부수는 게임을 할 수 있는 크롬 확장프로그램입니다.
 
-![스크린샷 2023-11-06 234441](https://github.com/YYun-D/Page_break/assets/85883811/d58aa657-1d31-4eba-a5c9-f99916fbb490)
+![스크린샷 2023-11-06 234441_1](https://github.com/YYun-D/Page_break/assets/85883811/7225272c-f8ca-448a-90b3-072c3e220107)
 
 v 0.3
 총 추가
