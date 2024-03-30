@@ -1,7 +1,7 @@
 var HammerElement = document.createElement('img');
 var GunElement = document.createElement('img');
 
-HammerElement.src = 'https://drive.google.com/uc?id=1vopgYHCDe2kUcxoZMvDas_SQN_sotKxa';
+HammerElement.src = chrome.runtime.getURL("assets/hammer.png");
 HammerElement.style.width = '125px';
 HammerElement.style.height = '125px';
 HammerElement.style.position = 'fixed';
@@ -10,9 +10,10 @@ HammerElement.style.borderRadius = '10px';
 HammerElement.style.userSelect = 'none'; // 드래그 막기
 HammerElement.style.textAlign = 'center';
 HammerElement.style.display = 'none';
+
 HammerElement.id = 'Hammer';
 
-GunElement.src = 'https://drive.google.com/uc?id=1k_w_r2M0wity2eg-r9wGvv7WbbmS_7SL';
+GunElement.src = chrome.runtime.getURL("assets/gun.png");
 GunElement.style.width = '200px';
 GunElement.style.height = '200px';
 GunElement.style.position = 'fixed';
@@ -27,10 +28,10 @@ document.body.appendChild(HammerElement);
 document.body.appendChild(GunElement);
 
 HammerElement.addEventListener('click', (event) => {
-  const audio = new Audio('https://docs.google.com/uc?export=open&id=1ZcDnrVooc3_vkMOhbf_XzFNuZ6p3zkEb');
+  const audio = new Audio(chrome.runtime.getURL("assets/hit-sound.mp3"));
   audio.play();
   const CrackImage = document.createElement('img');
-  CrackImage.src = 'https://drive.google.com/uc?id=13TWTLr5W_ePXiKXsCat6NKswRX0On_OY';
+  CrackImage.src = chrome.runtime.getURL("assets/crack.png");;
   CrackImage.style.position = 'fixed';
   CrackImage.style.zIndex = '10000';
   CrackImage.style.width = '120px';
@@ -47,10 +48,10 @@ HammerElement.addEventListener('click', (event) => {
 });
 
 GunElement.addEventListener('click', (event) => {
-  const audio = new Audio('https://docs.google.com/uc?export=open&id=1I918MJbfiVc487bcXy355At4C2F4UF1N');
+  const audio = new Audio(chrome.runtime.getURL("assets/gun-sound.mp3"));
   audio.play();
   const CrackImage = document.createElement('img');
-  CrackImage.src = 'https://drive.google.com/uc?id=1g4nlczVD9XUU_G5K1GaatTbHd8gLrnRd';
+  CrackImage.src = chrome.runtime.getURL("assets/gun-crack.png");
   CrackImage.style.position = 'fixed';
   CrackImage.style.zIndex = '10000';
   CrackImage.style.width = '150px';
